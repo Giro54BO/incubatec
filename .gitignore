@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Working files, not for the public site
+Contexto/
+*.original.mp4
