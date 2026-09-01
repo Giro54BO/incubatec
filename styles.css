@@ -30,7 +30,7 @@
 --font-sans:Montserrat,"Helvetica Neue",Arial,sans-serif;
 --type-display:300 clamp(3.8rem,8.8vw,8.8rem)/.9 var(--font-sans);
 --type-h1:300 clamp(3.4rem,6vw,6.2rem)/.94 var(--font-sans);
---type-h2:300 clamp(2.7rem,4.5vw,5.4rem)/.94 var(--font-sans);
+--type-h2:300 clamp(2.7rem,4.5vw,4.5rem)/.94 var(--font-sans);
 --type-h3:400 clamp(1.35rem,2vw,1.65rem)/1.05 var(--font-sans);
 --type-lede:400 clamp(.95rem,1.4vw,1.12rem)/1.5 var(--font-sans);
 --type-body:400 1rem/1.6 var(--font-sans);
