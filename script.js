@@ -60,14 +60,56 @@ if (toggle && nav) {
   }));
 }
 
+/* Destino de las respuestas del formulario de contacto.
+
+   El sitio es estático, así que no hay servidor que reciba el POST. Por
+   defecto el envío abre el cliente de correo del visitante con el mensaje ya
+   redactado hacia FORM_EMAIL.
+
+   Para que la entrega sea server-side (sin depender de que el visitante tenga
+   cliente de correo configurado), basta con pegar en FORM_ENDPOINT la URL de
+   un servicio de formularios —Formspree, Web3Forms, Getform— dado de alta con
+   esa misma casilla. El formulario hará POST ahí en lugar del mailto. */
+const FORM_EMAIL = 'incubatec.bo@gmail.com';
+const FORM_ENDPOINT = '';
+
 const form = document.querySelector('[data-form]');
 const status = document.querySelector('[data-form-status]');
 if (form && status) {
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
-    status.textContent = 'Gracias. Un responsable del programa te contactará con la información de la convocatoria vigente.';
-    form.reset();
+    const data = new FormData(form);
+
+    if (FORM_ENDPOINT) {
+      status.textContent = 'Enviando…';
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) throw new Error(res.status);
+        status.textContent = 'Gracias. Un responsable del programa te contactará con la información de la convocatoria vigente.';
+        form.reset();
+      } catch {
+        status.textContent = 'No pudimos enviar el mensaje. Escríbenos a ' + FORM_EMAIL + ' o por WhatsApp.';
+      }
+      return;
+    }
+
+    const subject = 'Consulta desde la web — ' + (data.get('nombre') || '');
+    const body = [
+      'Nombre: ' + (data.get('nombre') || ''),
+      'Correo: ' + (data.get('correo') || ''),
+      'Ciudad: ' + (data.get('ciudad') || ''),
+      '',
+      data.get('mensaje') || '',
+    ].join('\n');
+    window.location.href = 'mailto:' + FORM_EMAIL +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+    status.textContent = 'Abrimos tu correo con el mensaje listo para enviar a ' + FORM_EMAIL + '.';
   });
 }
 
@@ -114,13 +156,12 @@ if (motionOK && 'IntersectionObserver' in window) {
   revealed.forEach((el) => observer.observe(el));
 }
 
-/* The band video autoplays as ambient footage. When the visitor asks for
-   reduced motion we stop it and hand them controls instead of looping at them. */
+/* El video del hero es decorativo y se reproduce en bucle. Si el visitante pide
+   movimiento reducido lo detenemos en el póster en vez de seguir animándolo. */
 if (!motionOK) {
-  document.querySelectorAll('.photo-band video[autoplay]').forEach((video) => {
+  document.querySelectorAll('video[autoplay]').forEach((video) => {
     video.autoplay = false;
     video.loop = false;
-    video.controls = true;
     video.pause();
   });
 }

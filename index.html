@@ -44,8 +44,9 @@
     <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
       <a href="#quienes-somos">Quiénes somos</a>
       <a href="#programa">El programa</a>
+      <a href="#actividades">Eventos</a>
       <a href="#preguntas">Preguntas</a>
-      <a class="nav-cta" href="#participar">Quiero participar <span aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="https://drive.google.com/file/d/1LWG44ewLUSKbgxR9erJHut2OYwJJDssB/view?usp=drive_link" target="_blank" rel="noreferrer">Quiero participar <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
@@ -54,13 +55,19 @@
 
   <!-- 1 · Hero: propuesta de valor, ciudades y lockup de marca -->
   <section class="hero" id="inicio" aria-labelledby="hero-title" data-header-theme="dark">
+    <video class="hero__media" poster="Assets/imgs/web-incubatec-hero-web-poster.jpg"
+           autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+      <source src="Assets/imgs/web-incubatec-hero-web.webm" type="video/webm" />
+      <source src="Assets/imgs/web-incubatec-hero-web.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__scrim" aria-hidden="true"></div>
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <h1 id="hero-title"><span>Toda startup comienza con</span><span>una idea</span></h1>
+        <h1 id="hero-title"><span>Toda startup</span><span>comienza con</span><span>una idea</span></h1>
         <p class="hero-lede">Incubatec, el programa de incubación de la UPB y Fundación Solydes, impulsa a estudiantes, graduados y emprendedores a transformar sus ideas en startups con impacto.</p>
         <div class="hero-actions">
-          <a class="button button--ink" href="#participar">Quiero participar <span aria-hidden="true">↗</span></a>
-          <a class="button button--primary" href="#programa">Conocer el programa <span aria-hidden="true">→</span></a>
+          <a class="button button--primary" href="https://drive.google.com/file/d/1LWG44ewLUSKbgxR9erJHut2OYwJJDssB/view?usp=drive_link" target="_blank" rel="noreferrer">Quiero participar <span aria-hidden="true">↗</span></a>
+          <a class="button button--outline" href="#programa">Conocer el programa <span aria-hidden="true">→</span></a>
         </div>
         <div class="hero-cities" aria-label="Ciudades con oficinas del programa">
           <p class="hero-cities__label">Oficinas en:</p>
@@ -81,10 +88,10 @@
   </section>
 
   <!-- 2 · Quiénes somos -->
-  <section class="section section--dark" id="quienes-somos" aria-labelledby="quienes-somos-title" data-header-theme="dark">
-    <div class="shell split">
+  <section class="section" id="quienes-somos" aria-labelledby="quienes-somos-title" data-header-theme="light">
+    <div class="shell split split--ink">
       <div>
-        <p class="eyebrow eyebrow--light"><span></span> Quiénes somos</p>
+        <p class="eyebrow"><span></span> Quiénes somos</p>
         <h2 class="heading-upper" id="quienes-somos-title">INCUBATEC powered by Solydes + UPB</h2>
       </div>
       <div>
@@ -95,39 +102,7 @@
     </div>
   </section>
 
-  <!-- 3 · Banda de video a sangre -->
-  <section class="photo-band photo-band--video" aria-label="Comunidad de INCUBATEC en un encuentro del programa" data-header-theme="dark">
-    <figure class="photo-band__full">
-      <video poster="Assets/imgs/web-incubatec-hero-web-poster.jpg"
-             autoplay muted loop playsinline preload="metadata"
-             aria-label="Equipo y participantes de INCUBATEC durante un encuentro del programa">
-        <source src="Assets/imgs/web-incubatec-hero-web.webm" type="video/webm" />
-        <source src="Assets/imgs/web-incubatec-hero-web.mp4" type="video/mp4" />
-      </video>
-    </figure>
-  </section>
-
-  <!-- 4 · A quién está dirigido -->
-  <section class="section section--ruled" id="dirigido" aria-labelledby="dirigido-title" data-header-theme="light">
-    <div class="shell split split--ink">
-      <div>
-        <p class="eyebrow"><span></span> A quién está dirigido</p>
-        <h2 id="dirigido-title">Emprendedores en etapas tempranas</h2>
-      </div>
-      <div>
-        <p class="lede">Buscamos emprendedores, profesionales, estudiantes y equipos que tengan una idea, problema identificado o proyecto en etapa temprana y quieran convertirlo en una solución tecnológica viable.</p>
-        <p class="lede">Idealmente los participantes deben:</p>
-        <ul class="rule-list">
-          <li><span aria-hidden="true">+</span> Haber identificado un problema real que quieran resolver.</li>
-          <li><span aria-hidden="true">+</span> Contar con una idea inicial de solución, aunque todavía no esté completamente clara.</li>
-          <li><span aria-hidden="true">+</span> Tener compromiso y disponibilidad para participar activamente durante todo el programa.</li>
-        </ul>
-        <a class="button button--accent button--wide" href="#participar">Quiero participar <span aria-hidden="true">↗</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5 · El programa -->
+  <!-- 3 · El programa -->
   <section class="section section--dark" id="programa" aria-labelledby="programa-title" data-header-theme="dark">
     <div class="shell">
       <div class="section-head">
@@ -166,7 +141,27 @@
     </div>
   </section>
 
-  <section class="quote" data-header-theme="light">
+  <!-- 4 · A quién está dirigido -->
+  <section class="section section--ruled" id="dirigido" aria-labelledby="dirigido-title" data-header-theme="light">
+    <div class="shell split split--ink">
+      <div>
+        <p class="eyebrow"><span></span> A quién está dirigido</p>
+        <h2 id="dirigido-title">Emprendedores en etapas tempranas</h2>
+      </div>
+      <div>
+        <p class="lede">Buscamos emprendedores, profesionales, estudiantes y equipos que tengan una idea, problema identificado o proyecto en etapa temprana y quieran convertirlo en una solución tecnológica viable.</p>
+        <p class="lede">Idealmente los participantes deben:</p>
+        <ul class="rule-list">
+          <li><span aria-hidden="true">+</span> Haber identificado un problema real que quieran resolver.</li>
+          <li><span aria-hidden="true">+</span> Contar con una idea inicial de solución, aunque todavía no esté completamente clara.</li>
+          <li><span aria-hidden="true">+</span> Tener compromiso y disponibilidad para participar activamente durante todo el programa.</li>
+        </ul>
+        <a class="button button--accent button--wide" href="https://drive.google.com/file/d/1LWG44ewLUSKbgxR9erJHut2OYwJJDssB/view?usp=drive_link" target="_blank" rel="noreferrer">Quiero participar <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote quote--dark" data-header-theme="dark">
     <div class="quote-inner">
       <svg class="quote-mark" aria-hidden="true" viewBox="0 0 48 48" focusable="false">
         <circle cx="24" cy="24" r="17.5"></circle>
@@ -176,34 +171,35 @@
     </div>
   </section>
 
-  <!-- 6 · Ecosistema emprendedor -->
-  <section class="section section--dark" id="actividades" aria-labelledby="actividades-title" data-header-theme="dark">
+  <!-- 5 · Ecosistema emprendedor -->
+  <section class="section" id="actividades" aria-labelledby="actividades-title" data-header-theme="light">
     <div class="shell">
       <div class="section-head">
         <div>
-          <p class="eyebrow eyebrow--light"><span></span> Ecosistema emprendedor</p>
+          <p class="eyebrow"><span></span> Ecosistema emprendedor</p>
           <h2 id="actividades-title">Encuentros abiertos y networking</h2>
         </div>
         <div class="section-head-copy">
-          <p>Encuentra el próximo evento en tu ciudad.</p>
-          <a class="button button--accent button--wide" href="https://lnk.bio/incubatec.bo" target="_blank" rel="noreferrer">Ver calendario de eventos <span aria-hidden="true">↗</span></a>
+          <h3 class="section-head-copy__title">Conecta, explora y crea</h3>
+          <p>Cada mes, nuevas conversaciones sobre tecnología, tendencias y startups en nuestras Spark Networking Sessions. Cada trimestre, challenges para convertir problemas en nuevas ideas.</p>
+          <a class="button button--accent button--wide" href="https://luma.com/incubatec.bo" target="_blank" rel="noreferrer">Ver próximos eventos <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7 · Preguntas frecuentes -->
-  <section class="section section--ruled" id="preguntas" aria-labelledby="preguntas-title" data-header-theme="light">
-    <div class="shell split split--ink">
+  <!-- 6 · Preguntas frecuentes -->
+  <section class="section section--dark" id="preguntas" aria-labelledby="preguntas-title" data-header-theme="dark">
+    <div class="shell split">
       <div>
-        <p class="eyebrow"><span></span> Preguntas frecuentes</p>
+        <p class="eyebrow eyebrow--light"><span></span> Preguntas frecuentes</p>
         <h2 id="preguntas-title">Lo que suelen preguntarnos</h2>
       </div>
       <div>
         <div class="faq">
           <details open>
             <summary>¿Cuándo inicia el programa?</summary>
-            <p>Realizamos dos programas al año. Nuestra próxima convocatoria inicia el 5 de octubre de 2026 (inscripciones abiertas hasta el 20 de septiembre).</p>
+            <p>Realizamos dos programas al año. La convocatoria del Segundo Programa de Incubación se encuentra abierta, recibimos inscripciones hasta el 20 de septiembre.</p>
           </details>
           <details>
             <summary>¿Cuáles son los requisitos?</summary>
@@ -214,7 +210,7 @@
           </details>
           <details>
             <summary>¿El programa tiene costo?</summary>
-            <p>No tiene ningún costo.</p>
+            <p class="faq-cost"><strong>Costo por equipo</strong><br />Bs 1.500 Primera etapa<br />Bs 2.800 Segunda etapa</p>
           </details>
           <details>
             <summary>¿Cómo solicitar información o postular mi idea?</summary>
@@ -235,7 +231,7 @@
     </div>
   </section>
 
-  <!-- 8 · Banda fotográfica: charla y sesiones de trabajo -->
+  <!-- 7 · Banda fotográfica: charla y sesiones de trabajo -->
   <section class="photo-band photo-band--stack" aria-label="Sesiones y talleres del programa" data-header-theme="dark">
     <figure class="photo-band__full">
       <img src="Assets/imgs/DSC_9620.jpg" alt="Mentora de INCUBATEC durante una charla del programa" loading="lazy" />
@@ -250,7 +246,7 @@
     </div>
   </section>
 
-  <!-- 9 · Contáctanos: WhatsApp por ciudad -->
+  <!-- 8 · Contáctanos: WhatsApp por ciudad -->
   <section class="section section--dark" id="sedes" aria-labelledby="sedes-title" data-header-theme="dark">
     <div class="shell">
       <div class="section-head">
@@ -258,7 +254,6 @@
           <p class="eyebrow eyebrow--light"><span></span> Contáctanos</p>
           <h2 id="sedes-title">Elige tu ciudad y escríbenos.</h2>
         </div>
-        <p>El programa desarrolla actividades presenciales simultáneas en La Paz, Cochabamba y Santa Cruz.</p>
       </div>
       <div class="card-grid">
         <a class="place-card" href="https://wa.me/59170131326?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20programa%20de%20incubaci%C3%B3n" target="_blank" rel="noreferrer">
@@ -289,7 +284,7 @@
     </div>
   </section>
 
-  <!-- 10 · Formulario de contacto -->
+  <!-- 9 · Formulario de contacto -->
   <section class="section section--tint" id="participar" aria-labelledby="participar-title" data-header-theme="light">
     <div class="shell split split--ink">
       <div>
@@ -337,8 +332,9 @@
     </div>
     <div class="footer-col">
       <span class="footer-label">Menú</span>
-      <a href="#dirigido">A quién está dirigido</a>
       <a href="#programa">El programa</a>
+      <a href="#dirigido">A quién está dirigido</a>
+      <a href="#actividades">Eventos</a>
       <a href="#preguntas">Preguntas frecuentes</a>
     </div>
     <div class="footer-col">
@@ -389,9 +385,9 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Cuándo inicia el programa?", "acceptedAnswer": { "@type": "Answer", "text": "Realizamos dos programas al año. Nuestra próxima convocatoria inicia el 5 de octubre de 2026 (inscripciones abiertas hasta el 20 de septiembre)." } },
+        { "@type": "Question", "name": "¿Cuándo inicia el programa?", "acceptedAnswer": { "@type": "Answer", "text": "Realizamos dos programas al año. La convocatoria del Segundo Programa de Incubación se encuentra abierta, recibimos inscripciones hasta el 20 de septiembre." } },
         { "@type": "Question", "name": "¿Cuáles son los requisitos?", "acceptedAnswer": { "@type": "Answer", "text": "Para iniciar (Etapa 1): no necesitas tener una empresa formada, haber vendido previamente ni contar con un mínimo de integrantes. Puedes postular de forma individual solo con una idea de negocio de base tecnológica. Para avanzar a la Etapa 2 (Incubación): se requiere un equipo de 2 a 5 personas, al menos un integrante enfocado en desarrollo/tecnología, compromiso para avanzar con tareas quincenales y validación con evidencia sólida." } },
-        { "@type": "Question", "name": "¿El programa tiene costo?", "acceptedAnswer": { "@type": "Answer", "text": "No tiene ningún costo." } },
+        { "@type": "Question", "name": "¿El programa tiene costo?", "acceptedAnswer": { "@type": "Answer", "text": "Costo por equipo: Bs 1.500 la primera etapa y Bs 2.800 la segunda etapa." } },
         { "@type": "Question", "name": "¿Cómo solicitar información o postular mi idea?", "acceptedAnswer": { "@type": "Answer", "text": "Solo escribe al WhatsApp de tu ciudad (La Paz, Santa Cruz o Cochabamba) o déjanos tus datos en el formulario. Un responsable del programa te contactará con la información de la convocatoria vigente." } },
         { "@type": "Question", "name": "¿Cómo puedo postularme para ser mentor?", "acceptedAnswer": { "@type": "Answer", "text": "Puedes ponerte en contacto directamente a través de las redes sociales oficiales del programa (@incubatec.bo) o enviar una solicitud mediante el enlace principal (lnk.bio/incubatec.bo)." } }
       ]

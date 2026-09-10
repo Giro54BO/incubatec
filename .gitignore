@@ -4,3 +4,6 @@
 # Working files, not for the public site
 Contexto/
 *.original.mp4
+
+# Claude Code local scaffolding
+.claude/
